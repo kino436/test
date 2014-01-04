@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 {
     NSArray* questions;
+    unsigned short QuestionCounter;
 }
 @property (weak, nonatomic) IBOutlet UIButton *Button_yes;
 @property (weak, nonatomic) IBOutlet UIButton *Button_no;

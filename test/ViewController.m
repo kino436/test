@@ -30,6 +30,7 @@
         NSLog(@"answer:%@", [question objectForKey:@"Answer"]);
     }
     self.question.text = [[questions objectAtIndex:0] objectForKey:@"Question"];
+    QuestionCounter = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,9 +65,27 @@
 //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 //        [alert show];
     }
-    if (SelectedAnswer == [[questions objectAtIndex:0] objectForKey:@"Answer"]])
+    if (SelectedAnswer == [[[questions objectAtIndex:0] objectForKey:@"Answer"] boolValue])
     {
-        
+                printf("Correct!\n");
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                alert.tag = YES;
+                [alert show];
+    } else {
+                printf("Inccorect\n");
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                alert.tag = NO;
+                [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alert.tag == YES)
+    {
+        QuestionCounter++;
+        self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
+
     }
 }
 @end
