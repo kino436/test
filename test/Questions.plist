@@ -3,7 +3,7 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Qusetion</key>
+		<key>Question</key>
 		<string>熊野寮は個室だ</string>
 		<key>Answer</key>
 		<false/>

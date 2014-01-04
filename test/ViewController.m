@@ -23,7 +23,7 @@
 
     NSBundle* bundle = [NSBundle mainBundle];
     NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
-    NSArray* questions = [NSArray arrayWithContentsOfFile:path];
+    questions = [NSArray arrayWithContentsOfFile:path];
 
     for(NSDictionary* question in questions) {
         NSLog(@"question:%@", [question objectForKey:@"Question"]);
@@ -50,14 +50,23 @@
 
 - (void)showResult:(UIButton*)button
 {
+    BOOL SelectedAnswer;
     if (button == self.Button_yes) {
-        printf("Inccorect\n");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+        SelectedAnswer = YES;
+
+//        printf("Inccorect\n");
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        [alert show];
     } else {
-        printf("Correct!\n");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+        SelectedAnswer = NO;
+        
+//        printf("Correct!\n");
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        [alert show];
+    }
+    if (SelectedAnswer == [[questions objectAtIndex:0] objectForKey:@"Answer"]])
+    {
+        
     }
 }
 @end
