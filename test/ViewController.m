@@ -65,7 +65,7 @@
 //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 //        [alert show];
     }
-    if (SelectedAnswer == [[[questions objectAtIndex:0] objectForKey:@"Answer"] boolValue])
+    if (SelectedAnswer == [[[questions objectAtIndex:QuestionCounter] objectForKey:@"Answer"] boolValue])
     {
                 printf("Correct!\n");
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -83,9 +83,15 @@
 {
     if (alert.tag == YES)
     {
-        QuestionCounter++;
-        self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
-
+        if (QuestionCounter == QUESTION_MAX)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            alert.tag = NO;
+            [alert show];
+        } else {
+            QuestionCounter++;
+            self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
+        }
     }
 }
 @end
