@@ -20,7 +20,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self.Button_yes addTarget:self action:@selector(showResult:) forControlEvents:UIControlEventTouchDown];
     [self.Button_no addTarget:self action:@selector(showResult:) forControlEvents:UIControlEventTouchDown];
-    self.question.text = @"熊野寮は個室か？";
+
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
+    NSArray* questions = [NSArray arrayWithContentsOfFile:path];
+
+    for(NSDictionary* question in questions) {
+        NSLog(@"question:%@", [question objectForKey:@"Question"]);
+        NSLog(@"answer:%@", [question objectForKey:@"Answer"]);
+    }
+    self.question.text = [[questions objectAtIndex:0] objectForKey:@"Question"];
 }
 
 - (void)didReceiveMemoryWarning

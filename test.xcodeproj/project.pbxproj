@@ -22,6 +22,7 @@
 		BB14F0E01877D804008BCD25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BF1877D804008BCD25 /* UIKit.framework */; };
 		BB14F0E81877D804008BCD25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB14F0E61877D804008BCD25 /* InfoPlist.strings */; };
 		BB14F0EA1877D804008BCD25 /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB14F0E91877D804008BCD25 /* testTests.m */; };
+		BB4C73E91877FBAE000A3A0E /* Questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB4C73E81877FBAE000A3A0E /* Questions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BB14F0E51877D804008BCD25 /* testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTests-Info.plist"; sourceTree = "<group>"; };
 		BB14F0E71877D804008BCD25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB14F0E91877D804008BCD25 /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
+		BB4C73E81877FBAE000A3A0E /* Questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Questions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				BB14F0D41877D804008BCD25 /* ViewController.m */,
 				BB14F0D61877D804008BCD25 /* Images.xcassets */,
 				BB14F0C21877D804008BCD25 /* Supporting Files */,
+				BB4C73E81877FBAE000A3A0E /* Questions.plist */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				BB14F0D21877D804008BCD25 /* Main_iPad.storyboard in Resources */,
 				BB14F0D71877D804008BCD25 /* Images.xcassets in Resources */,
 				BB14F0CF1877D804008BCD25 /* Main_iPhone.storyboard in Resources */,
+				BB4C73E91877FBAE000A3A0E /* Questions.plist in Resources */,
 				BB14F0C61877D804008BCD25 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +478,7 @@
 				BB14F0EF1877D804008BCD25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB14F0F01877D804008BCD25 /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +487,7 @@
 				BB14F0F21877D804008BCD25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
