@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *Button_yes;
 @property (weak, nonatomic) IBOutlet UIButton *Button_no;
+@property (weak, nonatomic) IBOutlet UILabel *question;
 
 @end
