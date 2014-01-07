@@ -39,17 +39,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)showResultIncorrect
+- (void)showFinishMessage
 {
-    printf("Incorrect\n");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    alert.tag = NO;
+    [alert show];
 }
 
-- (void)showResultCorrect
+- (void)showRelsult:(BOOL)SelectedAnswer
 {
-    printf("Correct\n");
+    if (SelectedAnswer == [[[questions objectAtIndex:QuestionCounter] objectForKey:@"Answer"] boolValue])
+    {
+        printf("Correct!\n");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        alert.tag = YES;
+        [alert show];
+        QuestionCounter++;
+    } else {
+        printf("Inccorect\n");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"やり直す" otherButtonTitles: nil];
+        alert.tag = NO;
+        [alert show];
+    }
+    self.finished = NO;
 }
 
-- (void)showResult:(UIButton*)button
+- (void)judgeResult:(UIButton*)button
 {
     BOOL SelectedAnswer;
     if (button == self.Button_yes) {
@@ -65,29 +80,16 @@
 //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 //        [alert show];
     }
-    if (SelectedAnswer == [[[questions objectAtIndex:QuestionCounter] objectForKey:@"Answer"] boolValue])
-    {
-                printf("Correct!\n");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-                alert.tag = YES;
-                [alert show];
-                QuestionCounter++;
-    } else {
-                printf("Inccorect\n");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"やり直す" otherButtonTitles: nil];
-                alert.tag = NO;
-                [alert show];
-    }
-    self.finished = NO;
+    [self showRelsult:SelectedAnswer];
+
+    // アラートビューのクラッシュ対策
     while (!self.finished) {
         [[NSRunLoop currentRunLoop]
          runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
     }
     if (QuestionCounter == QUESTION_MAX)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        alert.tag = NO;
-        [alert show];
+        [self showFinishMessage];
     }
 }
 
