@@ -18,9 +18,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.Button_yes addTarget:self action:@selector(showResult:) forControlEvents:UIControlEventTouchDown];
-    [self.Button_no addTarget:self action:@selector(showResult:) forControlEvents:UIControlEventTouchDown];
+    
+    /*
+     ボタンに処理を紐付ける
+     */
+    [self.Button_yes addTarget:self action:@selector(processAnswer:) forControlEvents:UIControlEventTouchDown];
+    [self.Button_no addTarget:self action:@selector(processAnswer:) forControlEvents:UIControlEventTouchDown];
 
+    /*
+     クイズデータを読み込む
+     */
     NSBundle* bundle = [NSBundle mainBundle];
     NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
     questions = [NSArray arrayWithContentsOfFile:path];
@@ -29,6 +36,10 @@
         NSLog(@"question:%@", [question objectForKey:@"Question"]);
         NSLog(@"answer:%@", [question objectForKey:@"Answer"]);
     }
+    
+    /*
+     第1問を表示する
+     */
     self.question.text = [[questions objectAtIndex:0] objectForKey:@"Question"];
     QuestionCounter = 0;
 }
@@ -44,9 +55,6 @@
  */
 - (void)processAnswer:(UIButton*)button
 {
-    /*
-     正解か判別する
-     */
     BOOL SelectedAnswer;
     if (button == self.Button_yes) {
         SelectedAnswer = YES;
@@ -54,17 +62,13 @@
         SelectedAnswer = NO;
     }
     
-    /*
-     結果を表示する
-     */
     [self showRelsult:SelectedAnswer];
-
-    /*
-     終了であれば終了メッセージを表示する
-     */
     [self showFinishMessage];
 }
 
+/*
+ 最後の問題でなければ次の問題文を表示する
+ */
 - (void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex
 {
         if (QuestionCounter <= QUESTION_MAX - 1)
