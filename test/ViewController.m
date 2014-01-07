@@ -64,7 +64,7 @@
     self.finished = NO;
 }
 
-- (void)judgeResult:(UIButton*)button
+- (void)processAnswer:(UIButton*)button
 {
     BOOL SelectedAnswer;
     if (button == self.Button_yes) {
