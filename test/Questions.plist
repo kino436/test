@@ -14,5 +14,45 @@
 		<key>Answer</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>IncorrectAnswer</key>
+		<string>さえぐさ きい</string>
+		<key>CorrectAnswer</key>
+		<string>かんざき みずき</string>
+		<key>Question</key>
+		<string>スターライトがくえんNo.1のトップアイドルはだれ？</string>
+	</dict>
+	<dict>
+		<key>IncorrectAnswer</key>
+		<string>ソレイユ</string>
+		<key>CorrectAnswer</key>
+		<string>3つのほし</string>
+		<key>Question</key>
+		<string>かんざきみずきといちのせかえでととうどうゆりかのトライスターのいみは？</string>
+	</dict>
+	<dict>
+		<key>IncorrectAnswer</key>
+		<string>エンジェリーシュガー</string>
+		<key>CorrectAnswer</key>
+		<string>ボヘミアンスカイ</string>
+		<key>Question</key>
+		<string>かぜさわそらのしんブランドはなに？</string>
+	</dict>
+	<dict>
+		<key>IncorrectAnswer</key>
+		<string>トライスター</string>
+		<key>CorrectAnswer</key>
+		<string>ぽわぽわぷりりん</string>
+		<key>Question</key>
+		<string>ありすがわおとめをちゅうしんにかつどうするしんユニットはなに？</string>
+	</dict>
+	<dict>
+		<key>IncorrectAnswer</key>
+		<string>えびふぉん</string>
+		<key>CorrectAnswer</key>
+		<string>パソくん</string>
+		<key>Question</key>
+		<string>さえぐさきいのおへやにあるともだちはなに？</string>
+	</dict>
 </array>
 </plist>
