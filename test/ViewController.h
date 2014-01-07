@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *Button_no;
 @property (weak, nonatomic) IBOutlet UILabel *question;
 @property (nonatomic, assign) BOOL finished;
+@property (weak, nonatomic) IBOutlet UIButton *option1;
+@property (weak, nonatomic) IBOutlet UIButton *option2;
 
 @end

@@ -24,16 +24,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJq-RQ-eJY">
-                                <rect key="frame" x="196" y="269" width="46" height="30"/>
+                                <rect key="frame" x="20" y="320" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="いいえ">
+                                <state key="normal" title="選択肢2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjD-yG-hH7">
-                                <rect key="frame" x="87" y="269" width="46" height="30"/>
+                                <rect key="frame" x="20" y="228" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="はい">
+                                <state key="normal" title="選択肢1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -43,6 +43,8 @@
                     <connections>
                         <outlet property="Button_no" destination="uJq-RQ-eJY" id="pp3-sG-f44"/>
                         <outlet property="Button_yes" destination="wjD-yG-hH7" id="Sbw-cb-z7T"/>
+                        <outlet property="option1" destination="wjD-yG-hH7" id="BG4-9L-3vq"/>
+                        <outlet property="option2" destination="uJq-RQ-eJY" id="LTz-C4-oxE"/>
                         <outlet property="question" destination="9aX-od-rYO" id="tzy-aq-Pfs"/>
                     </connections>
                 </viewController>
