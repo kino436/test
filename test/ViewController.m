@@ -71,27 +71,32 @@
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 alert.tag = YES;
                 [alert show];
+                QuestionCounter++;
     } else {
                 printf("Inccorect\n");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"やり直す" otherButtonTitles: nil];
                 alert.tag = NO;
                 [alert show];
+    }
+    self.finished = NO;
+    while (!self.finished) {
+        [[NSRunLoop currentRunLoop]
+         runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
+    }
+    if (QuestionCounter == QUESTION_MAX)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        alert.tag = NO;
+        [alert show];
     }
 }
 
 - (void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (alert.tag == YES)
-    {
-        if (QuestionCounter == QUESTION_MAX)
+        if (QuestionCounter <= QUESTION_MAX - 1)
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            alert.tag = NO;
-            [alert show];
-        } else {
-            QuestionCounter++;
             self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
         }
-    }
+    self.finished = YES;
 }
 @end
