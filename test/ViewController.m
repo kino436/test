@@ -39,13 +39,44 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)showFinishMessage
+/*
+ 回答を処理する
+ */
+- (void)processAnswer:(UIButton*)button
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    alert.tag = NO;
-    [alert show];
+    /*
+     正解か判別する
+     */
+    BOOL SelectedAnswer;
+    if (button == self.Button_yes) {
+        SelectedAnswer = YES;
+    } else {
+        SelectedAnswer = NO;
+    }
+    
+    /*
+     結果を表示する
+     */
+    [self showRelsult:SelectedAnswer];
+
+    /*
+     終了であれば終了メッセージを表示する
+     */
+    [self showFinishMessage];
 }
 
+- (void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+        if (QuestionCounter <= QUESTION_MAX - 1)
+        {
+            self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
+        }
+    self.finished = YES;
+}
+
+/*
+ 結果を表示する
+ */
 - (void)showRelsult:(BOOL)SelectedAnswer
 {
     if (SelectedAnswer == [[[questions objectAtIndex:QuestionCounter] objectForKey:@"Answer"] boolValue])
@@ -64,24 +95,11 @@
     self.finished = NO;
 }
 
-- (void)processAnswer:(UIButton*)button
+/*
+ 終了であれば終了メッセージを表示する
+ */
+- (void)showFinishMessage
 {
-    BOOL SelectedAnswer;
-    if (button == self.Button_yes) {
-        SelectedAnswer = YES;
-
-//        printf("Inccorect\n");
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-//        [alert show];
-    } else {
-        SelectedAnswer = NO;
-        
-//        printf("Correct!\n");
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-//        [alert show];
-    }
-    [self showRelsult:SelectedAnswer];
-
     // アラートビューのクラッシュ対策
     while (!self.finished) {
         [[NSRunLoop currentRunLoop]
@@ -89,16 +107,10 @@
     }
     if (QuestionCounter == QUESTION_MAX)
     {
-        [self showFinishMessage];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        alert.tag = NO;
+        [alert show];
     }
 }
 
-- (void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-        if (QuestionCounter <= QUESTION_MAX - 1)
-        {
-            self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
-        }
-    self.finished = YES;
-}
 @end
