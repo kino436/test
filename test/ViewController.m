@@ -40,14 +40,16 @@
         NSLog(@"answer:%@", [question objectForKey:@"CorrectAnswer"]);
         NSLog(@"incorrect answer:%@", [question objectForKey:@"IncorrectAnswer"]);
     }
+    /*
+     乱数初期化
+     */
+    srand(time(nil));
     
     /*
      第1問を表示する
      */
-    self.question.text = [[questions objectAtIndex:0] objectForKey:@"Question"];
-    [self.Button_option1 setTitle:[[questions objectAtIndex:0] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
-    [self.Button_option2 setTitle:[[questions objectAtIndex:0] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
     QuestionCounter = 0;
+    [self setQwestionAndAnswer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,9 +81,7 @@
 {
         if (QuestionCounter <= QUESTION_MAX - 1)
         {
-            self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
-            [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
-            [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
+            [self setQwestionAndAnswer];
         }
     self.finished = YES;
 }
@@ -125,4 +125,21 @@
     }
 }
 
+/*
+ 質問と回答を表示する
+ */
+- (void)setQwestionAndAnswer
+{
+    self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
+
+    if (0 == rand()%2) {
+        [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
+        [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
+        NSLog(@"True Answer=option1");
+    } else {
+        [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
+        [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
+        NSLog(@"True Answer=option2");
+    }
+}
 @end
