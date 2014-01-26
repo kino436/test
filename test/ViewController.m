@@ -31,6 +31,7 @@
     NSBundle* bundle = [NSBundle mainBundle];
     NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
     questions = [NSArray arrayWithContentsOfFile:path];
+    NSInteger questionsMax = questions.count;
 
     /*
      Console Output For Debug
