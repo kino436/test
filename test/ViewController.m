@@ -22,8 +22,8 @@
     /*
      ボタンに処理を紐付ける
      */
-    [self.Button_yes addTarget:self action:@selector(processAnswer:) forControlEvents:UIControlEventTouchDown];
-    [self.Button_no addTarget:self action:@selector(processAnswer:) forControlEvents:UIControlEventTouchDown];
+    [self.Button_option1 addTarget:self action:@selector(processAnswer:) forControlEvents:UIControlEventTouchDown];
+    [self.Button_option2 addTarget:self action:@selector(processAnswer:) forControlEvents:UIControlEventTouchDown];
 
     /*
      クイズデータを読み込む
@@ -32,15 +32,21 @@
     NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
     questions = [NSArray arrayWithContentsOfFile:path];
 
+    /*
+     Console Output For Debug
+     */
     for(NSDictionary* question in questions) {
         NSLog(@"question:%@", [question objectForKey:@"Question"]);
-        NSLog(@"answer:%@", [question objectForKey:@"Answer"]);
+        NSLog(@"answer:%@", [question objectForKey:@"CorrectAnswer"]);
+        NSLog(@"incorrect answer:%@", [question objectForKey:@"IncorrectAnswer"]);
     }
     
     /*
      第1問を表示する
      */
     self.question.text = [[questions objectAtIndex:0] objectForKey:@"Question"];
+    [self.Button_option1 setTitle:[[questions objectAtIndex:0] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
+    [self.Button_option2 setTitle:[[questions objectAtIndex:0] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
     QuestionCounter = 0;
 }
 
@@ -55,11 +61,11 @@
  */
 - (void)processAnswer:(UIButton*)button
 {
-    BOOL SelectedAnswer;
-    if (button == self.Button_yes) {
-        SelectedAnswer = YES;
+    NSString *SelectedAnswer;
+    if (button == self.Button_option1) {
+        SelectedAnswer = self.Button_option1.currentTitle;
     } else {
-        SelectedAnswer = NO;
+        SelectedAnswer = self.Button_option2.currentTitle;
     }
     
     [self showRelsult:SelectedAnswer];
@@ -74,6 +80,8 @@
         if (QuestionCounter <= QUESTION_MAX - 1)
         {
             self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
+            [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
+            [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
         }
     self.finished = YES;
 }
@@ -81,9 +89,9 @@
 /*
  結果を表示する
  */
-- (void)showRelsult:(BOOL)SelectedAnswer
+- (void)showRelsult:(NSString *)SelectedAnswer
 {
-    if (SelectedAnswer == [[[questions objectAtIndex:QuestionCounter] objectForKey:@"Answer"] boolValue])
+    if (YES == [SelectedAnswer isEqualToString:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"]])
     {
         printf("Correct!\n");
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];

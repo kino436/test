@@ -3,18 +3,6 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Question</key>
-		<string>熊野寮は個室だ</string>
-		<key>Answer</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>Question</key>
-		<string>熊野寮には女子がいる</string>
-		<key>Answer</key>
-		<true/>
-	</dict>
-	<dict>
 		<key>IncorrectAnswer</key>
 		<string>さえぐさ きい</string>
 		<key>CorrectAnswer</key>
