@@ -20,5 +20,6 @@
 @property (nonatomic, assign) BOOL finished;
 @property (weak, nonatomic) IBOutlet UIButton *option1;
 @property (weak, nonatomic) IBOutlet UIButton *option2;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end

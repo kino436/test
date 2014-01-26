@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077C72821895398F000188E5 /* tristar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C72811895398F000188E5 /* tristar.jpg */; };
+		077C7284189539D5000188E5 /* starlight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C7283189539D5000188E5 /* starlight.jpg */; };
+		077C728618953A34000188E5 /* sora-kazesawa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728518953A34000188E5 /* sora-kazesawa.jpg */; };
+		077C728818953A78000188E5 /* powa-powa-puririn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728718953A78000188E5 /* powa-powa-puririn.jpg */; };
+		077C728C18953B28000188E5 /* kii-saegusa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728B18953B28000188E5 /* kii-saegusa.jpg */; };
 		BB14F0BC1877D804008BCD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BB1877D804008BCD25 /* Foundation.framework */; };
 		BB14F0BE1877D804008BCD25 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BD1877D804008BCD25 /* CoreGraphics.framework */; };
 		BB14F0C01877D804008BCD25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BF1877D804008BCD25 /* UIKit.framework */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		077C72811895398F000188E5 /* tristar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tristar.jpg; path = test/images/tristar.jpg; sourceTree = "<group>"; };
+		077C7283189539D5000188E5 /* starlight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = starlight.jpg; path = test/images/starlight.jpg; sourceTree = "<group>"; };
+		077C728518953A34000188E5 /* sora-kazesawa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sora-kazesawa.jpg"; sourceTree = "<group>"; };
+		077C728718953A78000188E5 /* powa-powa-puririn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "powa-powa-puririn.jpg"; sourceTree = "<group>"; };
+		077C728B18953B28000188E5 /* kii-saegusa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kii-saegusa.jpg"; sourceTree = "<group>"; };
 		BB14F0B81877D804008BCD25 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB14F0BB1877D804008BCD25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB14F0BD1877D804008BCD25 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,9 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077C727E189535B1000188E5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				077C728B18953B28000188E5 /* kii-saegusa.jpg */,
+				077C728718953A78000188E5 /* powa-powa-puririn.jpg */,
+				077C728518953A34000188E5 /* sora-kazesawa.jpg */,
+				077C7283189539D5000188E5 /* starlight.jpg */,
+				077C72811895398F000188E5 /* tristar.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		BB14F0AF1877D804008BCD25 = {
 			isa = PBXGroup;
 			children = (
+				077C727E189535B1000188E5 /* images */,
 				BB14F0C11877D804008BCD25 /* test */,
 				BB14F0E31877D804008BCD25 /* testTests */,
 				BB14F0BA1877D804008BCD25 /* Frameworks */,
@@ -237,9 +260,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077C728818953A78000188E5 /* powa-powa-puririn.jpg in Resources */,
 				BB14F0D21877D804008BCD25 /* Main_iPad.storyboard in Resources */,
+				077C728C18953B28000188E5 /* kii-saegusa.jpg in Resources */,
 				BB14F0D71877D804008BCD25 /* Images.xcassets in Resources */,
 				BB14F0CF1877D804008BCD25 /* Main_iPhone.storyboard in Resources */,
+				077C728618953A34000188E5 /* sora-kazesawa.jpg in Resources */,
+				077C7284189539D5000188E5 /* starlight.jpg in Resources */,
+				077C72821895398F000188E5 /* tristar.jpg in Resources */,
 				BB4C73E91877FBAE000A3A0E /* Questions.plist in Resources */,
 				BB14F0C61877D804008BCD25 /* InfoPlist.strings in Resources */,
 			);

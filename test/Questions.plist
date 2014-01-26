@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>backgroundImage</key>
+		<string>starlight</string>
 		<key>IncorrectAnswer</key>
 		<string>さえぐさ きい</string>
 		<key>CorrectAnswer</key>
@@ -11,6 +13,8 @@
 		<string>スターライトがくえんNo.1のトップアイドルはだれ？</string>
 	</dict>
 	<dict>
+		<key>backgroundImage</key>
+		<string>tristar</string>
 		<key>IncorrectAnswer</key>
 		<string>ソレイユ</string>
 		<key>CorrectAnswer</key>
@@ -19,6 +23,8 @@
 		<string>かんざきみずきといちのせかえでととうどうゆりかのトライスターのいみは？</string>
 	</dict>
 	<dict>
+		<key>backgroundImage</key>
+		<string>sora-kazesawa</string>
 		<key>IncorrectAnswer</key>
 		<string>エンジェリーシュガー</string>
 		<key>CorrectAnswer</key>
@@ -27,6 +33,8 @@
 		<string>かぜさわそらのしんブランドはなに？</string>
 	</dict>
 	<dict>
+		<key>backgroundImage</key>
+		<string>powa-powa-puririn</string>
 		<key>IncorrectAnswer</key>
 		<string>トライスター</string>
 		<key>CorrectAnswer</key>
@@ -35,6 +43,8 @@
 		<string>ありすがわおとめをちゅうしんにかつどうするしんユニットはなに？</string>
 	</dict>
 	<dict>
+		<key>backgroundImage</key>
+		<string>kii-saegusa</string>
 		<key>IncorrectAnswer</key>
 		<string>えびふぉん</string>
 		<key>CorrectAnswer</key>
