@@ -31,7 +31,7 @@
     NSBundle* bundle = [NSBundle mainBundle];
     NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
     questions = [NSArray arrayWithContentsOfFile:path];
-    NSInteger questionsMax = questions.count;
+    // NSInteger questionsMax = questions.count;
 
     /*
      Console Output For Debug
@@ -46,11 +46,24 @@
      */
     srand(time(nil));
     
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    /*
+     ULlabelを複数行表示できるように設定する
+     */
+    self.question.lineBreakMode = NSLineBreakByWordWrapping;
+
     /*
      第1問を表示する
      */
     QuestionCounter = 0;
-    [self setQwestionAndAnswer];
+    [self displayRandomQuestionAndAnswer];
+    
+    [self.view layoutSubviews];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +95,7 @@
 {
         if (QuestionCounter <= QUESTION_MAX - 1)
         {
-            [self setQwestionAndAnswer];
+            [self displayRandomQuestionAndAnswer];
         }
     self.finished = YES;
 }
@@ -129,10 +142,13 @@
 /*
  質問と回答を表示する
  */
-- (void)setQwestionAndAnswer
+- (void)displayRandomQuestionAndAnswer
 {
     self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
-
+    NSLog(@"%ld", (long)self.question.numberOfLines);
+    self.question.numberOfLines = 0;
+    [self.question sizeToFit];
+    
     if (0 == rand()%2) {
         [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
         [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
