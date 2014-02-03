@@ -31,7 +31,7 @@
     NSBundle* bundle = [NSBundle mainBundle];
     NSString* path = [bundle pathForResource:@"Questions" ofType:@"plist"];
     questions = [NSArray arrayWithContentsOfFile:path];
-    // NSInteger questionsMax = questions.count;
+    QuestionsMax = questions.count;
 
     /*
      Console Output For Debug
@@ -93,7 +93,7 @@
  */
 - (void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-        if (QuestionCounter <= QUESTION_MAX - 1)
+        if (QuestionCounter <= QuestionsMax - 1)
         {
             [self displayRandomQuestionAndAnswer];
         }
@@ -131,7 +131,7 @@
         [[NSRunLoop currentRunLoop]
          runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
     }
-    if (QuestionCounter == QUESTION_MAX)
+    if (QuestionCounter == QuestionsMax)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         alert.tag = NO;

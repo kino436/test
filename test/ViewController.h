@@ -13,6 +13,7 @@
 {
     NSArray* questions;
     unsigned short QuestionCounter;
+    unsigned short QuestionsMax;
 }
 @property (weak, nonatomic) IBOutlet UIButton *Button_option1;
 @property (weak, nonatomic) IBOutlet UIButton *Button_option2;
