@@ -40,6 +40,7 @@
         NSLog(@"question:%@", [question objectForKey:@"Question"]);
         NSLog(@"answer:%@", [question objectForKey:@"CorrectAnswer"]);
         NSLog(@"incorrect answer:%@", [question objectForKey:@"IncorrectAnswer"]);
+        NSLog(@"backgroundImage:%@", [question objectForKey:@"backgroundImage"]);
     }
     /*
      乱数初期化
@@ -140,15 +141,26 @@
 }
 
 /*
- 質問と回答を表示する
+ 質問と画像と回答を表示する
  */
 - (void)displayRandomQuestionAndAnswer
 {
+    /*
+     質問の表示
+     */
     self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
-    NSLog(@"%ld", (long)self.question.numberOfLines);
     self.question.numberOfLines = 0;
     [self.question sizeToFit];
     
+    /*
+     画像の表示
+     */
+    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[[questions objectAtIndex: QuestionCounter] objectForKey:@"backgroundImage"]]];
+    [_backgroundImageView setImage:img];
+
+    /*
+     ランダムな回答の表示
+     */
     if (0 == rand()%2) {
         [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
         [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];

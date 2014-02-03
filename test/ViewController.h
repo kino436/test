@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define QUESTION_MAX 5
 @interface ViewController : UIViewController
 {
     NSArray* questions;
