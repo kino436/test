@@ -47,6 +47,11 @@
      */
     srand(time(nil));
     
+    /*
+     BGMを再生する
+     */
+    [self playBgmRoop];
+    
 }
 
 - (void)viewDidLayoutSubviews
@@ -170,5 +175,24 @@
         [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
         NSLog(@"True Answer=option2");
     }
+}
+
+/*
+ BGMを再生する
+ */
+- (void)playBgmRoop
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"aikatsu" ofType:@"mp3"];
+    if (path == nil) {
+        NSLog(@"ファイルが見つかりません");
+        return;
+    }
+    NSURL *url = [NSURL fileURLWithPath:path];
+    AVAudioPlayer *audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+
+    // 無限ループ
+    audio.numberOfLoops = -1;
+    
+    [audio play];
 }
 @end

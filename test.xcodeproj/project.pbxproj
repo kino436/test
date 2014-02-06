@@ -12,6 +12,8 @@
 		077C728618953A34000188E5 /* sora-kazesawa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728518953A34000188E5 /* sora-kazesawa.jpg */; };
 		077C728818953A78000188E5 /* powa-powa-puririn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728718953A78000188E5 /* powa-powa-puririn.jpg */; };
 		077C728C18953B28000188E5 /* kii-saegusa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728B18953B28000188E5 /* kii-saegusa.jpg */; };
+		079C1E9D18A44085007B697A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079C1E9C18A44085007B697A /* AVFoundation.framework */; };
+		079C1EA318A443E1007B697A /* aikatsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079C1EA218A443E1007B697A /* aikatsu.mp3 */; };
 		BB14F0BC1877D804008BCD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BB1877D804008BCD25 /* Foundation.framework */; };
 		BB14F0BE1877D804008BCD25 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BD1877D804008BCD25 /* CoreGraphics.framework */; };
 		BB14F0C01877D804008BCD25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BF1877D804008BCD25 /* UIKit.framework */; };
@@ -46,6 +48,8 @@
 		077C728518953A34000188E5 /* sora-kazesawa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sora-kazesawa.jpg"; sourceTree = "<group>"; };
 		077C728718953A78000188E5 /* powa-powa-puririn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "powa-powa-puririn.jpg"; sourceTree = "<group>"; };
 		077C728B18953B28000188E5 /* kii-saegusa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kii-saegusa.jpg"; sourceTree = "<group>"; };
+		079C1E9C18A44085007B697A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		079C1EA218A443E1007B697A /* aikatsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aikatsu.mp3; sourceTree = "<group>"; };
 		BB14F0B81877D804008BCD25 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB14F0BB1877D804008BCD25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB14F0BD1877D804008BCD25 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079C1E9D18A44085007B697A /* AVFoundation.framework in Frameworks */,
 				BB14F0BE1877D804008BCD25 /* CoreGraphics.framework in Frameworks */,
 				BB14F0C01877D804008BCD25 /* UIKit.framework in Frameworks */,
 				BB14F0BC1877D804008BCD25 /* Foundation.framework in Frameworks */,
@@ -128,6 +133,7 @@
 		BB14F0BA1877D804008BCD25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				079C1E9C18A44085007B697A /* AVFoundation.framework */,
 				BB14F0BB1877D804008BCD25 /* Foundation.framework */,
 				BB14F0BD1877D804008BCD25 /* CoreGraphics.framework */,
 				BB14F0BF1877D804008BCD25 /* UIKit.framework */,
@@ -139,6 +145,7 @@
 		BB14F0C11877D804008BCD25 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				079C1EA218A443E1007B697A /* aikatsu.mp3 */,
 				BB14F0CA1877D804008BCD25 /* AppDelegate.h */,
 				BB14F0CB1877D804008BCD25 /* AppDelegate.m */,
 				BB14F0CD1877D804008BCD25 /* Main_iPhone.storyboard */,
@@ -260,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079C1EA318A443E1007B697A /* aikatsu.mp3 in Resources */,
 				077C728818953A78000188E5 /* powa-powa-puririn.jpg in Resources */,
 				BB14F0D21877D804008BCD25 /* Main_iPad.storyboard in Resources */,
 				077C728C18953B28000188E5 /* kii-saegusa.jpg in Resources */,
