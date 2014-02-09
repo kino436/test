@@ -12,6 +12,7 @@
 		077C728618953A34000188E5 /* sora-kazesawa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728518953A34000188E5 /* sora-kazesawa.jpg */; };
 		077C728818953A78000188E5 /* powa-powa-puririn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728718953A78000188E5 /* powa-powa-puririn.jpg */; };
 		077C728C18953B28000188E5 /* kii-saegusa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C728B18953B28000188E5 /* kii-saegusa.jpg */; };
+		078E49B918A7846E00874171 /* fitting-room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078E49B818A7846E00874171 /* fitting-room.jpg */; };
 		079C1E9D18A44085007B697A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079C1E9C18A44085007B697A /* AVFoundation.framework */; };
 		079C1EA318A443E1007B697A /* aikatsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079C1EA218A443E1007B697A /* aikatsu.mp3 */; };
 		079DFDC318A7825F00BC7F5E /* spicy-ageha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 079DFDC218A7825F00BC7F5E /* spicy-ageha.jpg */; };
@@ -49,6 +50,7 @@
 		077C728518953A34000188E5 /* sora-kazesawa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sora-kazesawa.jpg"; sourceTree = "<group>"; };
 		077C728718953A78000188E5 /* powa-powa-puririn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "powa-powa-puririn.jpg"; sourceTree = "<group>"; };
 		077C728B18953B28000188E5 /* kii-saegusa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kii-saegusa.jpg"; sourceTree = "<group>"; };
+		078E49B818A7846E00874171 /* fitting-room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fitting-room.jpg"; sourceTree = "<group>"; };
 		079C1E9C18A44085007B697A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		079C1EA218A443E1007B697A /* aikatsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aikatsu.mp3; sourceTree = "<group>"; };
 		079DFDC218A7825F00BC7F5E /* spicy-ageha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spicy-ageha.jpg"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		077C727E189535B1000188E5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				078E49B818A7846E00874171 /* fitting-room.jpg */,
 				079DFDC218A7825F00BC7F5E /* spicy-ageha.jpg */,
 				077C728B18953B28000188E5 /* kii-saegusa.jpg */,
 				077C728718953A78000188E5 /* powa-powa-puririn.jpg */,
@@ -277,6 +280,7 @@
 				BB14F0D71877D804008BCD25 /* Images.xcassets in Resources */,
 				BB14F0CF1877D804008BCD25 /* Main_iPhone.storyboard in Resources */,
 				077C728618953A34000188E5 /* sora-kazesawa.jpg in Resources */,
+				078E49B918A7846E00874171 /* fitting-room.jpg in Resources */,
 				077C7284189539D5000188E5 /* starlight.jpg in Resources */,
 				077C72821895398F000188E5 /* tristar.jpg in Resources */,
 				BB4C73E91877FBAE000A3A0E /* Questions.plist in Resources */,

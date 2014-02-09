@@ -4,12 +4,22 @@
 <array>
 	<dict>
 		<key>backgroundImage</key>
+		<string>fitting-room</string>
+		<key>Question</key>
+		<string>アイカツのメンバーがフィッティングルームに入れないのはなぜ？</string>
+		<key>CorrectAnswer</key>
+		<string>かがやきたいきもちをわすれたから</string>
+		<key>IncorrectAnswer</key>
+		<string>スペシャルアピールをせいこうさせられなかったから</string>
+	</dict>
+	<dict>
+		<key>backgroundImage</key>
 		<string>spicy-ageha</string>
 		<key>Question</key>
 		<string>スパイシーアゲハのミューズはだれ？</string>
 		<key>CorrectAnswer</key>
 		<string>しんじょうえませんぱい</string>
-		<key>incorrectAnswer</key>
+		<key>IncorrectAnswer</key>
 		<string>ティアラがくえんちょう</string>
 	</dict>
 	<dict>
