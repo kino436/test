@@ -4,6 +4,16 @@
 <array>
 	<dict>
 		<key>backgroundImage</key>
+		<string>spicy-ageha</string>
+		<key>Question</key>
+		<string>スパイシーアゲハのミューズはだれ？</string>
+		<key>CorrectAnswer</key>
+		<string>しんじょうえませんぱい</string>
+		<key>incorrectAnswer</key>
+		<string>ティアラがくえんちょう</string>
+	</dict>
+	<dict>
+		<key>backgroundImage</key>
 		<string>starlight</string>
 		<key>IncorrectAnswer</key>
 		<string>さえぐさ きい</string>
