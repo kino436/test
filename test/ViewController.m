@@ -45,7 +45,7 @@
     /*
      乱数初期化
      */
-    srand(time(nil));
+    srand((unsigned int)time(nil));
     
     /*
      BGMを再生する
