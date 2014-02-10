@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#include <AVFoundation/AVFoundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
 {
     NSArray* questions;
     unsigned short QuestionCounter;
     unsigned short QuestionsMax;
+    AVAudioPlayer *audio;
 }
 @property (weak, nonatomic) IBOutlet UIButton *Button_option1;
 @property (weak, nonatomic) IBOutlet UIButton *Button_option2;

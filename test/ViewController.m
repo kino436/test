@@ -188,7 +188,7 @@
         return;
     }
     NSURL *url = [NSURL fileURLWithPath:path];
-    AVAudioPlayer *audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
 
     // 無限ループ
     audio.numberOfLoops = -1;
