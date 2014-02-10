@@ -48,6 +48,11 @@
     srand((unsigned int)time(nil));
     
     /*
+     問題番号を0番にセットする
+     */
+    QuestionCounter = 0;
+
+    /*
      BGMを再生する
      */
     [self playBgmRoop];
@@ -64,9 +69,8 @@
     self.question.lineBreakMode = NSLineBreakByWordWrapping;
 
     /*
-     第1問を表示する
+     問題を表示する
      */
-    QuestionCounter = 0;
     [self displayRandomQuestionAndAnswer];
     
     [self.view layoutSubviews];
