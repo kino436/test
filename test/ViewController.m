@@ -118,13 +118,13 @@
     if (YES == [SelectedAnswer isEqualToString:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"]])
     {
         printf("Correct!\n");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"正解です" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"けっか" message:@"せいかいです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         alert.tag = YES;
         [alert show];
         QuestionCounter++;
     } else {
         printf("Inccorect\n");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果" message:@"間違いです" delegate:self cancelButtonTitle:@"やり直す" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"けっか" message:@"まちがいです" delegate:self cancelButtonTitle:@"やりなおす" otherButtonTitles: nil];
         alert.tag = NO;
         [alert show];
     }
