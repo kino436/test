@@ -3,6 +3,26 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>CorrectAnswer</key>
+		<string>デイジー</string>
+		<key>IncorrectAnswer</key>
+		<string>チューリップ</string>
+		<key>backgroundImage</key>
+		<string>himesato-maria</string>
+		<key>Question</key>
+		<string>ひめさとマリアのすきなはなは？</string>
+	</dict>
+	<dict>
+		<key>backgroundImage</key>
+		<string>otoshiro-seira</string>
+		<key>Question</key>
+		<string>おとしろせいらのいもうとはだれ？</string>
+		<key>CorrectAnswer</key>
+		<string>のえる</string>
+		<key>IncorrectAnswer</key>
+		<string>ミスターエス</string>
+	</dict>
+	<dict>
 		<key>backgroundImage</key>
 		<string>fitting-room</string>
 		<key>Question</key>

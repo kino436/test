@@ -143,7 +143,7 @@
     }
     if (QuestionCounter == QuestionsMax)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"終了" message:@"お疲れ様でした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"おしまい" message:@"おつかれさまでした" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         alert.tag = NO;
         [alert show];
     }
