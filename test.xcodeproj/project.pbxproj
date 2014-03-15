@@ -17,6 +17,7 @@
 		079C1E9D18A44085007B697A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079C1E9C18A44085007B697A /* AVFoundation.framework */; };
 		079C1EA318A443E1007B697A /* aikatsu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 079C1EA218A443E1007B697A /* aikatsu.mp3 */; };
 		079DFDC318A7825F00BC7F5E /* spicy-ageha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 079DFDC218A7825F00BC7F5E /* spicy-ageha.jpg */; };
+		07AB2D3818D4600600DAE6A2 /* soraohmu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07AB2D3718D4600600DAE6A2 /* soraohmu.jpg */; };
 		07D5773C18AA2F8D005FB32E /* otoshiro-seira.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07D5773B18AA2F8D005FB32E /* otoshiro-seira.jpg */; };
 		07D5773E18AA3009005FB32E /* himesato-maria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07D5773D18AA3009005FB32E /* himesato-maria.jpg */; };
 		BB14F0BC1877D804008BCD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14F0BB1877D804008BCD25 /* Foundation.framework */; };
@@ -58,6 +59,7 @@
 		079C1E9C18A44085007B697A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		079C1EA218A443E1007B697A /* aikatsu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aikatsu.mp3; sourceTree = "<group>"; };
 		079DFDC218A7825F00BC7F5E /* spicy-ageha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spicy-ageha.jpg"; sourceTree = "<group>"; };
+		07AB2D3718D4600600DAE6A2 /* soraohmu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soraohmu.jpg; sourceTree = "<group>"; };
 		07D5773B18AA2F8D005FB32E /* otoshiro-seira.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otoshiro-seira.jpg"; sourceTree = "<group>"; };
 		07D5773D18AA3009005FB32E /* himesato-maria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "himesato-maria.jpg"; sourceTree = "<group>"; };
 		BB14F0B81877D804008BCD25 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 		077C727E189535B1000188E5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				07AB2D3718D4600600DAE6A2 /* soraohmu.jpg */,
 				0792D60418D452100086E6E5 /* egao.jpg */,
 				07D5773D18AA3009005FB32E /* himesato-maria.jpg */,
 				07D5773B18AA2F8D005FB32E /* otoshiro-seira.jpg */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079C1EA318A443E1007B697A /* aikatsu.mp3 in Resources */,
+				07AB2D3818D4600600DAE6A2 /* soraohmu.jpg in Resources */,
 				077C728818953A78000188E5 /* powa-powa-puririn.jpg in Resources */,
 				BB14F0D21877D804008BCD25 /* Main_iPad.storyboard in Resources */,
 				0792D60518D452100086E6E5 /* egao.jpg in Resources */,

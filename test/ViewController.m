@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+#pragma mark セットアップ
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -82,6 +84,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark メインルーチン
+
 /*
  回答を処理する
  */
@@ -94,9 +98,13 @@
         SelectedAnswer = self.Button_option2.currentTitle;
     }
     
+    self.finishedAllQuestions = NO;
+
     [self showRelsult:SelectedAnswer];
     [self showFinishMessage];
 }
+
+#pragma mark サブルーチン
 
 /*
  最後の問題でなければ次の問題文を表示する
@@ -107,7 +115,7 @@
         {
             [self displayRandomQuestionAndAnswer];
         }
-    self.finished = YES;
+    self.finishedAllQuestions = YES;
 }
 
 /*
@@ -115,20 +123,25 @@
  */
 - (void)showRelsult:(NSString *)SelectedAnswer
 {
-    if (YES == [SelectedAnswer isEqualToString:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"]])
+    /*
+     選択した選択肢が正しければ・・・
+     */
+    if (YES == [SelectedAnswer isEqualToString:questions[QuestionCounter][@"CorrectAnswer"]])
     {
         printf("Correct!\n");
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"けっか" message:@"せいかいです" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         alert.tag = YES;
         [alert show];
         QuestionCounter++;
+    /*
+     そうでなければ・・・
+     */
     } else {
         printf("Inccorect\n");
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"けっか" message:@"まちがいです" delegate:self cancelButtonTitle:@"やりなおす" otherButtonTitles: nil];
         alert.tag = NO;
         [alert show];
     }
-    self.finished = NO;
 }
 
 /*
@@ -137,7 +150,7 @@
 - (void)showFinishMessage
 {
     // アラートビューのクラッシュ対策
-    while (!self.finished) {
+    while (!self.finishedAllQuestions) {
         [[NSRunLoop currentRunLoop]
          runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
     }
@@ -199,4 +212,5 @@
     
     [audio play];
 }
+
 @end

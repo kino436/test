@@ -4,6 +4,16 @@
 <array>
 	<dict>
 		<key>Question</key>
+		<string>かぜさわそらがかっているオウムのなまえは？</string>
+		<key>CorrectAnswer</key>
+		<string>パーム</string>
+		<key>IncorrectAnswer</key>
+		<string>マキナ</string>
+		<key>backgroundImage</key>
+		<string>soraohmu</string>
+	</dict>
+	<dict>
+		<key>Question</key>
 		<string>えがおでしゃしんにうつるコツは？</string>
 		<key>CorrectAnswer</key>
 		<string>こうかくをあげる</string>
