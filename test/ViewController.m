@@ -37,10 +37,10 @@
      Console Output For Debug
      */
     for(NSDictionary* question in questions) {
-        NSLog(@"question:%@", [question objectForKey:@"Question"]);
-        NSLog(@"answer:%@", [question objectForKey:@"CorrectAnswer"]);
-        NSLog(@"incorrect answer:%@", [question objectForKey:@"IncorrectAnswer"]);
-        NSLog(@"backgroundImage:%@", [question objectForKey:@"backgroundImage"]);
+        NSLog(@"question:%@", question[@"Question"]);
+        NSLog(@"answer:%@", question[@"CorrectAnswer"]);
+        NSLog(@"incorrect answer:%@", question[@"IncorrectAnswer"]);
+        NSLog(@"backgroundImage:%@", question[@"backgroundImage"]);
     }
     /*
      乱数初期化
@@ -157,26 +157,26 @@
     /*
      質問の表示
      */
-    self.question.text = [[questions objectAtIndex:QuestionCounter] objectForKey:@"Question"];
+    self.question.text = questions[QuestionCounter][@"Question"];
     self.question.numberOfLines = 0;
     [self.question sizeToFit];
     
     /*
      画像の表示
      */
-    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[[questions objectAtIndex: QuestionCounter] objectForKey:@"backgroundImage"]]];
+    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",questions[QuestionCounter][@"backgroundImage"]]];
     [_backgroundImageView setImage:img];
 
     /*
      ランダムな回答の表示
      */
     if (0 == rand()%2) {
-        [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
-        [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
+        [self.Button_option1 setTitle:questions[QuestionCounter][@"CorrectAnswer"] forState:UIControlStateNormal];
+        [self.Button_option2 setTitle:questions[QuestionCounter][@"IncorrectAnswer"] forState:UIControlStateNormal];
         NSLog(@"True Answer=option1");
     } else {
-        [self.Button_option1 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"IncorrectAnswer"] forState:UIControlStateNormal];
-        [self.Button_option2 setTitle:[[questions objectAtIndex:QuestionCounter] objectForKey:@"CorrectAnswer"] forState:UIControlStateNormal];
+        [self.Button_option1 setTitle:questions[QuestionCounter][@"IncorrectAnswer"] forState:UIControlStateNormal];
+        [self.Button_option2 setTitle:questions[QuestionCounter][@"CorrectAnswer"] forState:UIControlStateNormal];
         NSLog(@"True Answer=option2");
     }
 }
