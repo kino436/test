@@ -3,6 +3,16 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>Question</key>
+		<string>えがおでしゃしんにうつるコツは？</string>
+		<key>CorrectAnswer</key>
+		<string>こうかくをあげる</string>
+		<key>IncorrectAnswer</key>
+		<string>すきなたべものをおもいうかべる</string>
+		<key>backgroundImage</key>
+		<string>egao</string>
+	</dict>
+	<dict>
 		<key>CorrectAnswer</key>
 		<string>デイジー</string>
 		<key>IncorrectAnswer</key>
